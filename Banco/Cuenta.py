@@ -10,14 +10,18 @@ class Cuenta:
         self.valor_deposito=0
     
     def depositar(self,valor):
+        valor=float(valor)
+        self.__cantidad=float(self.__cantidad)
         self.valor_deposito=valor  
-        if valor>0:
+        if valor>=0:
          self.boleano_deposito=True   
          self.__cantidad=self.__cantidad+valor
         else:
          print("Error al momento de realizar el deposito")
     
     def retirar(self,valor):
+        valor=float(valor)
+        self.__cantidad=float(self.__cantidad)
         self.valor_retiro=valor  
         if valor>=0 and valor<=self.__cantidad:
             self.__cantidad=self.__cantidad-valor
